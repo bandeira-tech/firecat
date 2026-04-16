@@ -4,9 +4,16 @@
     "apps/host"
   ],
   "imports": {
-    "@bandeira-tech/b3nd-sdk": "jsr:@bandeira-tech/b3nd-sdk@^0.8.1",
-    "@std/assert": "jsr:@std/assert@^1.0.15"
+    "@bandeira-tech/b3nd-sdk": "../b3nd/src/mod.ts",
+    "@bandeira-tech/b3nd-sdk/types": "../b3nd/src/types.ts",
+    "@bandeira-tech/b3nd-sdk/auth": "../b3nd/src/auth.ts",
+    "@bandeira-tech/b3nd-sdk/hash": "../b3nd/src/hash.ts",
+    "@bandeira-tech/b3nd-sdk/encrypt": "../b3nd/src/encrypt.ts",
+    "@std/assert": "jsr:@std/assert@^1.0.15",
+    "@std/encoding": "jsr:@std/encoding@^1.0.10",
+    "canonicalize": "npm:canonicalize@2.0.0"
   },
+  "nodeModulesDir": "auto",
   "tasks": {
     "test": "deno test --allow-all libs/ apps/",
     "check": "deno check libs/protocol/mod.ts"
